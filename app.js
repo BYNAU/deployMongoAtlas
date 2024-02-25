@@ -1,6 +1,5 @@
 const express = require("express")
 const app = express()
-
 const path = require("path")
 const cookieparser = require("cookie-parser")
 const logger = require("morgan")
@@ -21,4 +20,4 @@ app.use( (req,res,next) => {
     res.send("404 not found")
 })
 
-app.listen(10000)
+app.listen(process.env.PORT)
