@@ -1,0 +1,9 @@
+const archivo = fileURLToPath(import.meta.url) // Archivo meta (el que se está ejecutando)
+    const directorio = path.dirname(archivo) // Recupero mi directorio base
+    const ruta = path.join(directorio, req.url) // Ruta absoluta del recurso solicitado
+    //const fileStream = createReadStream(ruta, 'UTF-8')
+    let fileStream = null
+
+    console.log('Archivo: ', archivo)
+    console.log('Directorio: ', directorio)
+    console.log('Ruta: ', ruta)
